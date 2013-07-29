@@ -1,12 +1,25 @@
-// @import "grid-settings"
+@import "bourbon"
+@import "grid-settings"
+@import "neat"
 @import "mixins"
 @import "fonts"
 @import "variables"
 
-html
-  height: 100%
-  width: 100%
+.wrapper
+  margin: 0
+  padding: 0
 
-body
-  height: 100%
-  width: 100%
+
+#feed
+  @include outer-container
+  .instagram
+    margin: 20px 0 40px
+    @include span-columns(4)
+    @include shift(1)
+    @include omega(1n)
+  a 
+    display: block
+    width: 100%
+  img
+    width: 100%
+  .caption

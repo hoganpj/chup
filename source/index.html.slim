@@ -1,14 +1,14 @@
 javascript:
   var feed = new Instafeed({
-        clientId: 'd27b0622fdfb40bf8a07ad86bcb606f0',
-        target: 'feed',
-        get: 'tagged',
-        tagName: 'chüp',
-        links: true,
-        resolution: 'standard_resolution'
-        template: '{{model}}'
-    });
-    feed.run();
+      clientId: 'd27b0622fdfb40bf8a07ad86bcb606f0',
+      target: 'feed',
+      get: 'tagged',
+      tagName: 'chüp',
+      links: true,
+      resolution: 'standard_resolution',
+      template: '<div class="instagram"><a href="{{link}}" target="new"><img src="{{image}}" /></a><span class="username">{{model.user.username}}</span><span class="caption">{{caption}}</span></div>'
+  });
+  feed.run();
 
 h1 What is chüp?
 
