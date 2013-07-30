@@ -5,21 +5,44 @@
 @import "fonts"
 @import "variables"
 
+body
+  background-color: $warm-gray
+  color: $cool-gray
+  font-family: 'Open Sans', sans-serif
+  line-height: 1.3em
+
 .wrapper
   margin: 0
   padding: 0
 
 
+#page-wrap
+  padding: 50px 10px
+
+#title
+  font-size: 5em
+  margin: 0 auto 50px
+  text-align: center
+  width: 100%
+
 #feed
   @include outer-container
   .instagram
     margin: 20px 0 40px
-    @include span-columns(4)
-    @include shift(1)
+    @include span-columns(3)
     @include omega(1n)
+    @include media($tablet)
+      @include span-columns(4)
+      @include shift(1)
   a 
     display: block
     width: 100%
   img
+    border: 1px solid lightgray
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.05)
     width: 100%
+  span
+    display: block
+  .username
+    font-weight: bold
   .caption
